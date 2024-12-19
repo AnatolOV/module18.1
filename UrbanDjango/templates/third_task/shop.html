@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        h2 { color: #555; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 15px 0; }
+        button { margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Магазин</h1>
+    <h2>Список товаров:</h2>
+
+    <ul>
+        {% for key, value in products.items %}
+        <li>
+            <strong>{{ value }}</strong><br>
+            <button>Купить</button>
+            <button>Подробнее</button>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{% url 'platform' %}"><button>На главную страницу</button></a>
+
+</body>
+</html>
