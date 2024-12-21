@@ -1,0 +1,13 @@
+{% extends 'fouth_task/menu.html' %}
+
+{% block pagename %}Игры{% endblock %}
+
+
+{% block content %}
+{% for product in products.games %}
+<p>{{ product }}
+    <button>Купить</button>
+</p>
+{% endfor %}
+
+{% endblock %}

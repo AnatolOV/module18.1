@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from task2.views import func_index, classTemplate
-from task3.views import shop_view, platform_view, cart_view
+# from task3.views import shop_view, platform_view, cart_view
+from task4.views import shop_view, platform_view, cart_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('func/', func_index),
     path('class/', classTemplate.as_view()),
-    path('platform/', platform_view, name='platform'),
-    path('platform/shop/', shop_view, name='shop'),
-    path('platform/cart/', cart_view, name='cart'),
+    path('menu/', platform_view, name='menu'),
+    path('menu/shop/', shop_view, name='shop'),
+    path('menu/cart/', cart_view, name='cart'),
 ]
