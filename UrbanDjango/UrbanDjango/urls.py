@@ -20,6 +20,9 @@ from task2.views import func_index, classTemplate
 # from task3.views import shop_view, platform_view, cart_view
 from task4.views import shop_view, platform_view, cart_view
 
+from django.urls import path
+from task5.views import sign_up_by_django, sign_up_by_html
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('func/', func_index),
@@ -27,4 +30,6 @@ urlpatterns = [
     path('menu/', platform_view, name='menu'),
     path('menu/shop/', shop_view, name='shop'),
     path('menu/cart/', cart_view, name='cart'),
+    path('sign-up-django/', sign_up_by_django, name='sign_up_django'),
+    path('sign-up-html/', sign_up_by_html, name='sign_up_html'),
 ]
